@@ -1,0 +1,57 @@
+.homepage-container {
+  background-image: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+/* Dark overlay over background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main content */
+.homepage-content {
+  text-align: center;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.homepage-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.homepage-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #388e3c;
+}

@@ -1,0 +1,148 @@
+/* Signup page with background image and dark overlay */
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?ga=GA1.1.1888167887.1747306348&semt=ais_hybrid&w=740') center/cover no-repeat;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism form container */
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 400px;
+  animation: slideFadeIn 0.7s ease;
+}
+
+/* Input fields */
+.signup-page input[type="text"],
+.signup-page input[type="email"],
+.signup-page input[type="password"],
+.signup-page select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.signup-page input::placeholder {
+  color: #bbb;
+}
+
+.signup-page input:focus,
+.signup-page select:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* OTP container */
+.signup-page .email-otp-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* OTP input and button */
+.email-otp-container input[type="email"] {
+  flex: 3;
+}
+
+.send-otp-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-otp-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Submit button */
+.signup-page button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.signup-page button[type="submit"]:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Disabled state */
+.signup-page button[disabled],
+.send-otp-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Login link */
+.login-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-link p {
+  color: #ccc;
+}
+
+.login-link a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #ddd;
+}
+
+/* Animations */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

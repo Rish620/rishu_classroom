@@ -1,0 +1,176 @@
+.profile-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?ga=GA1.1.1888167887.1747306348&semt=ais_hybrid&w=740') center/cover no-repeat;
+  box-sizing: border-box;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.profile-info:hover {
+  transform: translateY(-2px);
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 25px;
+  border: 3px solid #333;
+}
+
+.profile-details h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Create Classroom Button */
+.create-classroom-btn {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.create-classroom-btn:hover {
+  background: linear-gradient(135deg, #444, #666);
+  transform: scale(1.03);
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup Content with Glassmorphism */
+.popup-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+  animation: popupFadeIn 0.4s ease;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #000;
+  font-size: 1rem;
+}
+
+.popup-content textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.popup-buttons button:hover {
+  background: linear-gradient(135deg, #444, #666);
+}
+
+/* Classroom List Table */
+.classroom-list {
+  margin-top: 30px;
+}
+
+.classroom-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.classroom-list th,
+.classroom-list td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.classroom-list th {
+  background-color: #333;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.classroom-list tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.classroom-list tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+/* Animations */
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

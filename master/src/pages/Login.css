@@ -1,0 +1,121 @@
+/* Fullscreen centered layout with gradient background */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+   background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?semt=ais_hybrid&w=740') center/cover no-repeat; 
+}
+
+/* Title */
+.login-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ffffff, #aaaaaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Glassmorphism form */
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.8s ease forwards;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Input Fields */
+.login-page input[type="email"],
+.login-page input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-page input::placeholder {
+  color: #bbb;
+}
+
+.login-page input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Submit Button */
+.login-page button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #dddddd);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-page button[type="submit"]:hover {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  transform: scale(1.03);
+}
+
+.login-page button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Signup link */
+.login-page .signup-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.login-page .signup-link a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-page .signup-link a:hover {
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
